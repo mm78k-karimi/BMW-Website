@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="./img/logo-light.svg">
+  <link rel="stylesheet" href="./style/style.css">
+  <!-- <link rel='stylesheet' media='screen and (max-width: 820px)' href='./style/mobile.css' /> -->
+  <title>BMW | Contact Us</title>
+</head>
+<body>
+
+  <header id="contactpage-header">
+    <div class="navbar-typeB" id="navbar">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./products.html">Products</a></li>
+        <li class="selected-page"><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div id="menu">
+      <hr>
+      <hr>
+      <hr>
+    </div>
+  </header>
+
+
+  <div id="contactpage-container">
+    <form action="#">
+      <input type="text" name="firstname" id="firstname" placeholder="First name">
+      <input type="text" name="lastname" id="lastname" placeholder="Last name">
+      <input type="email" name="email" id="email" placeholder="E-mail">
+      <input type="number" name="phone" id="phone" placeholder="Phone">
+      <div id="driving-license">
+        <label for="license">Have driving license?</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div id="options">
+          <input type="radio" name="radio" id="radio">
+          <label for="yes">Yes</label>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <input type="radio" name="radio" id="radio">
+          <label for="no">No</label>
+        </div>
+      </div>
+      <div id="favorite-car">
+        <label for="car">&nbsp;&nbsp;&nbsp;Which BMW car do you like more? </label> <br>
+        <input type="search" name="car" id="car" placeholder="Search" autocomplete="off">
+        <div id="cars-list">
+          <ul>
+
+          </ul>
+        </div>
+      </div>
+      <textarea name="message" id="message" placeholder="Message" ></textarea>
+      <button>Sumbit</button>
+    </form>
+    
+
+  </div>
+  
+  <script src="./apps/contact.js"></script>
+</body>
+</html>

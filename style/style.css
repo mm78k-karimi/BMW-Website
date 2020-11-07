@@ -1,0 +1,828 @@
+html {
+  background: #000000;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #009ADA;
+  border-radius: 10px;
+}
+
+#video-container {
+  width: 100%;
+  background: #000;
+}
+
+#showcase-video {
+  width: 100%;
+  height: 56%;
+  position: relative;
+  left: 0%;
+  top: 0%;
+  opacity: 0.3;
+}
+
+#developer-info {
+  position: sticky;
+  bottom: 65vh;
+  background-color: #009ADA;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 5px;
+  color: #ffffff;
+  z-index: 3;
+  cursor: pointer;
+  opacity: 0.15;
+  transition: all 1s;
+}
+
+#developer-info h4 {
+  text-align: center;
+  transition: all 1s;
+}
+
+#developer-info p {
+  display: none;
+}
+
+#developer-info:hover {
+  opacity: 1;
+}
+
+#developer-info:hover h4 {
+  margin-bottom: 10px;
+}
+
+#developer-info:hover p {
+  display: block;
+}
+
+#navbar {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  width: 90%;
+  top: 10px;
+  left: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#navbar ul {
+  transition: all 1s;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+#navbar ul li {
+  width: fit-content !important;
+  margin: 20px 10px;
+  transition: all 0.3s linear;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#navbar ul li:hover {
+  border-bottom: 3px #009ADA solid;
+  opacity: 0.5;
+}
+
+#navbar ul .selected-page {
+  border-bottom: 3px #009ADA solid;
+  border-radius: 4px;
+}
+
+#navbar ul .selected-page a {
+  color: #009ADA;
+}
+
+.navbar-typeB {
+  padding: 20px 0px;
+  border-bottom: #333 solid 1px;
+}
+
+#menu {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 5px;
+  left: 17px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 2;
+}
+
+#menu hr {
+  height: 3px;
+  width: 80%;
+  border: none;
+  background: #009ADA;
+  margin: auto;
+}
+
+#showcase {
+  position: absolute;
+  width: 100%;
+  color: #ffffff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+  top: 20vw;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+#showcase h2 #span1 {
+  color: #009ADA;
+}
+
+#showcase h2 #span1 #span2 {
+  display: inline-block;
+  top: -10px;
+  left: 20px;
+}
+
+#showcase h2 #span1 #span2 #hrs {
+  position: relative;
+  top: -27px;
+}
+
+#showcase h2 #span1 #span2 #hrs {
+  display: flex;
+  flex-direction: column;
+  color: #009ADA;
+}
+
+#showcase h2 #span1 #span2 #hrs hr {
+  background: #009ADA;
+  border: none;
+  border-radius: 1px;
+  width: 170%;
+  height: 5px;
+  margin: 4.35px;
+  display: inline-block;
+}
+
+#showcase h4 {
+  font-size: 1.5rem;
+  text-shadow: #009ADA 0px 0px 0px;
+  animation: slogan-shadow 1s infinite linear;
+}
+
+@keyframes slogan-shadow {
+  50% {
+    text-shadow: #009ADA 0px 0px 16px;
+  }
+}
+
+#bmw-buildings {
+  color: #ffffff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#bmw-buildings h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 20px 0px;
+}
+
+#bmw-buildings h3 span {
+  color: #009ADA;
+}
+
+#bmw-buildings #buildings {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+}
+
+#bmw-buildings #buildings p {
+  margin: 5px;
+}
+
+#bmw-buildings #buildings .building {
+  padding: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  transform: scale(1);
+}
+
+#bmw-buildings #buildings .building:hover img {
+  transform: scale(1.3);
+}
+
+#bmw-buildings #buildings .building:hover .img-info {
+  opacity: 1;
+  bottom: 0;
+}
+
+#bmw-buildings #buildings .building img {
+  width: 100%;
+  transition: all 1s;
+}
+
+#bmw-buildings #buildings .building .img-info {
+  position: absolute;
+  bottom: -50px;
+  padding: 5px;
+  opacity: 0;
+  transition: all 1s;
+  background: linear-gradient(to bottom, transparent, #000);
+}
+
+#bmw-buildings #buildings .building .img-info a {
+  text-decoration: none;
+  padding: 3px 8px;
+  border-radius: 3px;
+  box-shadow: #ffffff 1px 1px 2px;
+  color: #ffffff;
+  background-color: #009ADA;
+  float: right;
+  margin: 0px  30px 20px 0px;
+}
+
+#bmw-breakdown {
+  color: #ffffff;
+  margin: 20px 5%;
+  width: 90%;
+}
+
+#bmw-breakdown h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#bmw-breakdown h2 span {
+  color: #009ADA;
+}
+
+#bmw-breakdown #models {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#bmw-breakdown #models .model #count {
+  border: 1.5vw #ffffff solid;
+  border-radius: 50%;
+  padding: 0.5vw;
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  align-items: center;
+  transition: all 1s;
+  font-size: 1.5vw;
+}
+
+#bmw-breakdown #models .model #count p {
+  text-align: center;
+  width: 100%;
+}
+
+#bmw-breakdown #models .model h3 {
+  text-align: center;
+  margin: 10px auto;
+}
+
+#bmw-breakdown #models .model:hover h3 {
+  color: #009ADA;
+}
+
+#bmw-breakdown #models .model:hover #count {
+  width: 12vw;
+  height: 12vw;
+  color: #009ADA;
+  border-color: #009ADA;
+}
+
+#productpage-container, #aboutpage-container, footer {
+  color: #ffffff;
+  width: 90%;
+  margin: auto;
+  height: 50px;
+  border-top: #333 solid 1px;
+}
+
+#productpage-container #sidebar, #productpage-container #footer-content, #aboutpage-container #sidebar, #aboutpage-container #footer-content, footer #sidebar, footer #footer-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#productpage-container #sidebar #bmw-websites, #productpage-container #footer-content #bmw-websites, #aboutpage-container #sidebar #bmw-websites, #aboutpage-container #footer-content #bmw-websites, footer #sidebar #bmw-websites, footer #footer-content #bmw-websites {
+  flex: 2;
+  padding: 30px;
+  max-width: 500px;
+}
+
+#productpage-container #sidebar #bmw-websites h3, #productpage-container #footer-content #bmw-websites h3, #aboutpage-container #sidebar #bmw-websites h3, #aboutpage-container #footer-content #bmw-websites h3, footer #sidebar #bmw-websites h3, footer #footer-content #bmw-websites h3 {
+  left: 5vw;
+  width: 100%;
+  margin: 10px 0px;
+  border-bottom: 1px solid #333;
+}
+
+#productpage-container #sidebar #bmw-websites h3 span, #productpage-container #footer-content #bmw-websites h3 span, #aboutpage-container #sidebar #bmw-websites h3 span, #aboutpage-container #footer-content #bmw-websites h3 span, footer #sidebar #bmw-websites h3 span, footer #footer-content #bmw-websites h3 span {
+  color: #009ADA;
+}
+
+#productpage-container #sidebar #bmw-websites #websites-list, #productpage-container #footer-content #bmw-websites #websites-list, #aboutpage-container #sidebar #bmw-websites #websites-list, #aboutpage-container #footer-content #bmw-websites #websites-list, footer #sidebar #bmw-websites #websites-list, footer #footer-content #bmw-websites #websites-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#productpage-container #sidebar #bmw-websites #websites-list ul, #productpage-container #footer-content #bmw-websites #websites-list ul, #aboutpage-container #sidebar #bmw-websites #websites-list ul, #aboutpage-container #footer-content #bmw-websites #websites-list ul, footer #sidebar #bmw-websites #websites-list ul, footer #footer-content #bmw-websites #websites-list ul {
+  list-style: none;
+}
+
+#productpage-container #sidebar #bmw-websites #websites-list ul li, #productpage-container #footer-content #bmw-websites #websites-list ul li, #aboutpage-container #sidebar #bmw-websites #websites-list ul li, #aboutpage-container #footer-content #bmw-websites #websites-list ul li, footer #sidebar #bmw-websites #websites-list ul li, footer #footer-content #bmw-websites #websites-list ul li {
+  margin: 5px 0px;
+}
+
+#productpage-container #sidebar #bmw-websites #websites-list ul li a, #productpage-container #footer-content #bmw-websites #websites-list ul li a, #aboutpage-container #sidebar #bmw-websites #websites-list ul li a, #aboutpage-container #footer-content #bmw-websites #websites-list ul li a, footer #sidebar #bmw-websites #websites-list ul li a, footer #footer-content #bmw-websites #websites-list ul li a {
+  color: #009ADA;
+  text-decoration: none;
+}
+
+#productpage-container #sidebar #bmw-websites #websites-list ul li a:hover, #productpage-container #footer-content #bmw-websites #websites-list ul li a:hover, #aboutpage-container #sidebar #bmw-websites #websites-list ul li a:hover, #aboutpage-container #footer-content #bmw-websites #websites-list ul li a:hover, footer #sidebar #bmw-websites #websites-list ul li a:hover, footer #footer-content #bmw-websites #websites-list ul li a:hover {
+  color: #ffffff;
+}
+
+#productpage-container #sidebar #social-medias, #productpage-container #footer-content #social-medias, #aboutpage-container #sidebar #social-medias, #aboutpage-container #footer-content #social-medias, footer #sidebar #social-medias, footer #footer-content #social-medias {
+  max-width: 400px;
+  padding: 30px;
+  flex: 1;
+}
+
+#productpage-container #sidebar #social-medias h3, #productpage-container #footer-content #social-medias h3, #aboutpage-container #sidebar #social-medias h3, #aboutpage-container #footer-content #social-medias h3, footer #sidebar #social-medias h3, footer #footer-content #social-medias h3 {
+  width: 70%;
+  margin: 10px 0px;
+  border-bottom: 1px solid #333;
+}
+
+#productpage-container #sidebar #social-medias ul li, #productpage-container #footer-content #social-medias ul li, #aboutpage-container #sidebar #social-medias ul li, #aboutpage-container #footer-content #social-medias ul li, footer #sidebar #social-medias ul li, footer #footer-content #social-medias ul li {
+  list-style: none;
+  margin: 10px 0px;
+}
+
+#productpage-container #sidebar #social-medias ul li a, #productpage-container #footer-content #social-medias ul li a, #aboutpage-container #sidebar #social-medias ul li a, #aboutpage-container #footer-content #social-medias ul li a, footer #sidebar #social-medias ul li a, footer #footer-content #social-medias ul li a {
+  text-decoration: none;
+  color: #009ADA;
+}
+
+#productpage-container #sidebar #social-medias ul li a:hover, #productpage-container #footer-content #social-medias ul li a:hover, #aboutpage-container #sidebar #social-medias ul li a:hover, #aboutpage-container #footer-content #social-medias ul li a:hover, footer #sidebar #social-medias ul li a:hover, footer #footer-content #social-medias ul li a:hover {
+  color: #ffffff;
+}
+
+#productpage-container > p, #aboutpage-container > p, footer > p {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+#productpage-container #developer span, #aboutpage-container #developer span, footer #developer span {
+  color: #009ADA;
+}
+
+#aboutpage-header #navbar, #productpage-header #navbar {
+  position: relative;
+}
+
+#aboutpage-container, #productpage-container {
+  position: relative;
+  top: 20px;
+  width: 90%;
+  margin: auto;
+  border-top: none;
+  display: grid;
+  grid-gap: 5vw;
+  grid-template-columns: 3fr 1fr;
+}
+
+#aboutpage-container #article h2, #aboutpage-container #products h2, #productpage-container #article h2, #productpage-container #products h2 {
+  top: 0%;
+  width: 67.5%;
+  margin: auto;
+  font-size: 4vw;
+  text-align: center;
+}
+
+#aboutpage-container #article h2 span, #aboutpage-container #products h2 span, #productpage-container #article h2 span, #productpage-container #products h2 span {
+  color: #009ADA;
+}
+
+#aboutpage-container #article > img, #aboutpage-container #products > img, #productpage-container #article > img, #productpage-container #products > img {
+  display: block;
+  position: relative;
+  top: -5vw;
+  width: 70%;
+  opacity: 0.8;
+  margin: auto;
+  z-index: -1;
+  box-shadow: inset 0 0 10px #009ADA;
+}
+
+#aboutpage-container #article h3, #aboutpage-container #products h3, #productpage-container #article h3, #productpage-container #products h3 {
+  font-size: 3vw;
+  padding: 5px 0px 0px 0px;
+  border-bottom: #333 solid 1px;
+  margin-bottom: 15px;
+}
+
+#aboutpage-container #article h3 span, #aboutpage-container #products h3 span, #productpage-container #article h3 span, #productpage-container #products h3 span {
+  color: #009ADA;
+  border-bottom: #009ADA 1px dotted;
+}
+
+#aboutpage-container #article p, #aboutpage-container #products p, #productpage-container #article p, #productpage-container #products p {
+  font-size: 1.2rem;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+#aboutpage-container #article p img, #aboutpage-container #products p img, #productpage-container #article p img, #productpage-container #products p img {
+  width: 15vw;
+  display: block;
+  margin: 30px auto;
+  position: relative;
+}
+
+#aboutpage-container #sidebar, #productpage-container #sidebar {
+  display: block;
+  margin-top: 30px;
+  border-left: 1px #333 dotted;
+}
+
+#aboutpage-container #sidebar #bmw-websites, #productpage-container #sidebar #bmw-websites {
+  padding-right: 0;
+}
+
+#aboutpage-container #sidebar #bmw-websites #websites-list, #productpage-container #sidebar #bmw-websites #websites-list {
+  display: block;
+}
+
+#aboutpage-container #sidebar #bmw-websites #websites-list ul li, #productpage-container #sidebar #bmw-websites #websites-list ul li {
+  margin-bottom: 10px;
+}
+
+#aboutpage-container #sidebar #social-medias, #productpage-container #sidebar #social-medias {
+  padding-right: 0;
+}
+
+.article {
+  transition: all 1s;
+  transform: scale(0);
+}
+
+#aboutpage-footer {
+  position: relative;
+  bottom: 0;
+}
+
+.product-img-bg {
+  display: flex;
+  align-items: center;
+  width: 20vw;
+  height: 20vw;
+  max-width: 250px;
+  max-height: 250px;
+  background: radial-gradient(rgba(0, 154, 218, 0.4), transparent 80%);
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 5vw #000000;
+}
+
+.product-img-bg img {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+@keyframes product-bg {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes product {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+#products .product {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  border-bottom: 1px #009ADA solid;
+  transition: all 1s;
+  padding: 2vw 0;
+}
+
+#products .product .product-info {
+  width: 50%;
+  position: relative;
+  top: 2vw;
+  left: -50vw;
+  opacity: 0;
+  transition: all 1s;
+}
+
+#products .product .product-info p {
+  font-size: 1rem !important;
+}
+
+#products .product .product-info h3 span {
+  border-bottom: none;
+}
+
+#products .product:hover .product-info {
+  opacity: 1;
+  left: 5vw;
+}
+
+#products .product:last-child {
+  border-bottom: none;
+}
+
+#products .product:hover .product-img-bg {
+  transition: border 0.5s;
+  border: 10px solid;
+  border-color: #ffffff #031E49;
+  animation: product-bg 4s infinite linear;
+}
+
+#products .product:hover .product-img-bg img {
+  animation: product 4s infinite linear;
+}
+
+#go-up {
+  transition: all 1s;
+  width: fit-content;
+  height: fit-content;
+  padding: 22px 10px;
+  background: #009ADA;
+  z-index: 5;
+  cursor: pointer;
+  position: fixed;
+  left: 4vw;
+  bottom: 10vh;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #000000;
+  transform: scale(0);
+}
+
+@media (min-width: 651px) {
+  .product-img-bg {
+    margin: auto;
+  }
+}
+
+#contactpage-header #navbar {
+  justify-content: center;
+}
+
+#contactpage-container {
+  position: relative;
+  top: 130px;
+  width: 70vw;
+  height: 70vw;
+  margin: auto;
+  color: #ffffff;
+}
+
+#contactpage-container::before {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  left: 10vw;
+  content: "";
+  background: url("../img/logo-light.svg") no-repeat center center/cover;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+#contactpage-container form {
+  width: 100%;
+  height: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 5fr;
+  grid-row-gap: 1vw;
+  grid-column-gap: 4vw;
+}
+
+#contactpage-container form input {
+  height: 2.5rem;
+  background-color: #031E49;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 5px;
+  box-shadow: #009ADA 0px 0px 6px;
+  color: #ffffff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#contactpage-container form #favorite-car {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 5px;
+}
+
+#contactpage-container form #favorite-car label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: #009ADA 0px 0px 4px;
+}
+
+#contactpage-container form #favorite-car input {
+  position: relative;
+  top: -10px;
+}
+
+#contactpage-container form #favorite-car #cars-list {
+  position: absolute;
+  top: 90%;
+  width: calc( 100% - 10px);
+  background: #031E49;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  max-height: 190px;
+  overflow: hidden;
+  box-shadow: #009ADA 0px 0px 6px;
+  z-index: 1;
+}
+
+#contactpage-container form #favorite-car #cars-list ul {
+  list-style: none;
+}
+
+#contactpage-container form #favorite-car #cars-list ul li {
+  border-bottom: 1px solid #7b7878;
+  padding: 10px 0px 5px 0px;
+}
+
+#contactpage-container form #favorite-car #cars-list ul li:first-child {
+  padding-top: 0;
+}
+
+#contactpage-container form #favorite-car #cars-list ul li:last-child {
+  border-bottom: none;
+}
+
+#contactpage-container form #favorite-car #cars-list ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#contactpage-container form #driving-license {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 5px;
+}
+
+#contactpage-container form #driving-license label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: #009ADA 0px 0px 4px;
+}
+
+#contactpage-container form #driving-license input {
+  margin-bottom: 10px;
+  box-shadow: none;
+}
+
+#contactpage-container form #driving-license #options {
+  position: relative;
+  top: -15px;
+}
+
+#contactpage-container form #driving-license #options label {
+  position: relative;
+  top: -15px;
+}
+
+#contactpage-container form #message {
+  width: 100%;
+  margin: 10px auto;
+  grid-column: 1 / span 2;
+  background-color: #031E49;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 10px 20px;
+  box-shadow: #009ADA 0px 0px 6px;
+  color: #ffffff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.3rem;
+  min-height: 200px;
+}
+
+::placeholder {
+  color: #ffffff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  opacity: 0.8;
+}
+
+label[for="car"], input[id="car"] {
+  width: 100%;
+}
+
+button {
+  display: block;
+  width: 80%;
+  background: #031E49;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: #009ADA 0px 0px 6px;
+  margin: 30px auto;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  cursor: pointer;
+  grid-column: 1/span 2;
+}
+
+@media (max-width: 980px) and (min-width: 850px) {
+  #contactpage-container {
+    width: 80vw;
+    height: 80vw;
+  }
+  #contactpage-container form {
+    grid-row-gap: 2vw;
+  }
+  #contactpage-container::before {
+    left: 15vw;
+  }
+}
+
+@media (max-width: 849px) and (min-width: 750px) {
+  #contactpage-container {
+    width: 90vw;
+    height: 90vw;
+  }
+  #contactpage-container form {
+    grid-row-gap: 3vw;
+  }
+  #contactpage-container::before {
+    left: 20vw;
+  }
+}
+
+@media (max-width: 749px) {
+  #contactpage-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  #contactpage-container form input {
+    margin-bottom: 10px;
+  }
+  #contactpage-container form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 460px) {
+  #contactpage-container {
+    min-width: 85vw;
+  }
+  form label {
+    font-size: 0.9rem !important;
+  }
+  textarea::placeholder, button {
+    font-size: 1rem;
+  }
+  #navbar ul li {
+    margin: 10px;
+    font-size: 0.8rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
