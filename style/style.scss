@@ -788,6 +788,9 @@ body {
 
     #contactpage-container{
       min-width: 85vw;
+      &::before {
+        left: 17vw;
+      }
     }
     form label {
       font-size: 0.9rem !important;
